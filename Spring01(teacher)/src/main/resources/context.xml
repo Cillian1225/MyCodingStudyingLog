@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+<!-- 메인에서 스프링 컨테이너가 가동되는 순간 context.xml 읽고 context component가 실행되면
+우리가 지정한 패키지내에서 컴포넌트 어노테이션을 모두 찾아낸다. 그리고 찾아서 모두 인스턴스화시킨다.-->
+<context:component-scan base-package="kh.spring.beans"></context:component-scan>
+
+</beans>

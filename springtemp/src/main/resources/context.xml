@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- Lg TV = new LgTV();와 동일하다 -->
+<!-- Constructor Injection -->
+<!-- <bean id="tv" class="kh.spring.beans.LgTV"> TV전체의 파라미터 
+LG에 첫번째 인자에 15, 50 스피커를 준다.
+	<constructor-arg value="15"/> 채널
+	<constructor-arg value="50"/> 볼륨
+	<constructor-arg ref="speaker"/> 스피커에대한 id 값  넣기  밑에 파라미터에서 삽입 됨
+</bean> 
+ -->
+ 
+ <bean id="tv" class="kh.spring.beans.LgTV">
+ 	<property name="Channel" value="20"/>
+ 	<property name="Volume" value="150"/>
+ 	<property name="Speaker" ref="speaker"/>
+ </bean>
+ 
+<bean id="Speaker" class ="kh.spring.beans.BritzSpeaker"></bean>
+
+
+</beans>
